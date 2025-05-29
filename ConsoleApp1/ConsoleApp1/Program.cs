@@ -61,17 +61,22 @@ class Program2
 {
     static void Main() 
     {
-        array.arrays();
+        MyArray obj = new MyArray();
+        array.arrays(obj.arr);
     }
 }
 
 class array
 {
-    static int[] arr = {1,2,31,5,4,};
-    public static void arrays(){
-        foreach (int x in arr){
+    public static void arrays(int[] array){
+        foreach (int x in array){
             Console.WriteLine(x);
         }
-        Console.WriteLine("[ "+string.Join(", ", arr)+" ]");
+        Console.WriteLine("[ "+string.Join(", ", array)+" ]");
     }
+}
+
+class MyArray {
+    public int[] arr = {1,2,31,5,4,};
+    
 }
